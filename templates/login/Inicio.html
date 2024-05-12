@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/Inicio/Css/diseñoinicio.css">
+        <script src="../../static/Inicio/js/vali.js"></script>
+
+   
+    </head>
+    <body  >
+        <main>
+            <div id="login-container" style="color: #000000">
+                <div id="login">
+                    <h2>Iniciar sesión</h2>
+                    <form action="#" th:action="@{/usuario/process/login}" th:object="${login}" method="post">
+                        <div>
+                            <label for="user">Nombre de usuario:</label>
+                            <input type="text" id="user" name="user" th:field="*{user}" required>
+                        </div>
+                        <div>
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" name="password" th:field="*{password}" required>
+                        </div>
+                        <button type="submit">Iniciar Sesión</button>
+
+                        <p th:if="${error}" th:text="${error}"></p>
+                    </form>
+
+                    <div id="buttons">
+                        <br>
+                        <br>
+                        <a href="/index.html" class="button">Volver</a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </body>
+</html>

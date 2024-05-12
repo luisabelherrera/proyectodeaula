@@ -1,0 +1,245 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="stylesheet" type="text/css" href="/AdministracionCss/Gestionarestudiante.css" />
+    <link rel="stylesheet" type="text/css" href="/AdministracionCss/Ventanaadminprincipal.css" />
+    <link rel="stylesheet" type="text/css" href="/AdministracionCss/Usuariollamardatos.css" />
+    <script src="../../../../static/admin/js/barra.js"></script>
+    <link rel="stylesheet" href="/AdministracionCss/Bootstrap.css">
+    <link rel="stylesheet" href="/AdministracionCss/Forms.css">
+    <script src="../../../../static/admin/js/filtrado.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/AdministracionCss/TituloPrincipal.css">
+
+    <title>ADMINISTRACION</title>
+</head>
+
+<body>
+<section id="container" >
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+        </div>
+        <a href="" >
+
+            <br>
+            <b >VENTANA: ADMINISTRADOR</b>
+            <b class="visible-xs TextWhite">ADV.TIME</b>
+        </a>
+        <div class="top-menu text-center">
+
+
+        </div>
+    </header>
+    <aside>
+        <div id="sidebar"  class="nav-collapse">
+            <ul class="sidebar-menu nav">
+                <li>
+                    <p class="text-center">
+                        <a>
+                            <img src="/Imagenes/coding-startup-pexels-978x652.jpg" class="img-circle" width="80">
+                        </a>
+                    </p>
+                    <h5 class="text-center TextWhite">@ADMINISTRADOR</h5>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="/usuario/registro">
+                        <i class="fa fa-dashboard TextWhite"></i>
+                        <span class="TextWhite">Panel Usuario</span>
+                    </a>
+                    <ul>
+
+
+                        <li><a href="/usuario/registro">Crear Usuario</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="/estudiantes/lista">
+                        <i class="fa fa-user-graduate icon-colored"></i>
+                        <span class="TextWhite">Estudiante</span>
+                    </a>
+                    <ul>
+                        <li><a href="/estudiantes/crear" class="abc">Registrar Nuevo Alumno</a><br></li>
+                        <li><a href="/estudiantes/lista" class="abc">Lista Alumno</a><br></li>
+
+                    </ul>
+                </li>
+
+
+                <li class="sub-menu">
+                    <a href="/profesores/lista">
+                        <i class="fa fa-chalkboard-teacher icon-colored"></i>
+                        <span class="TextWhite">Profesor</span>
+                    </a>
+                    <ul>
+                        <li><a href="/profesores/crear" class="abc">Nuevo Profesor</a><br></li>
+                        <li><a href="/profesores/lista" class="abc">Listado Profesores</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="sub-menu">
+                    <a href="/calificaciones/listar">
+                        <i class="fa fa-graduation-cap icon-colored"></i>
+                        <span class="TextWhite">Calificaciones</span>
+                    </a>
+                    <ul>
+                        <li><a href="/calificaciones/agregar" class="abe">Agregar Calificaciones</a><br></li>
+                        <li><a href="/calificaciones/listar" class="abe">Listado Calificaciones</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="sub-menu">
+                    <a href="/asignaturas/lista">
+                        <i class="fa fa-book-open icon-colored"></i>
+                        <span class="TextWhite">Asignatura</span>
+                    </a>
+                    <ul>
+                        <li><a href="/asignaturas/formulario-crear" class="abe">Registrar Asignatura</a><br></li>
+                        <li><a href="/asignaturas/lista" class="abe">Listado Asignaturas</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="sub-menu">
+                    <a href="/cursos/lista">
+                        <i class="fa fa-book icon-colored"></i>
+                        <span class="TextWhite">Curso</span>
+                    </a>
+                    <ul>
+                        <li><a href="/cursos/crear" class="abe">Registrar Curso</a><br></li>
+                        <li><a href="/cursos/lista" class="abe">Listado Cursos</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="sub-menu">
+                    <a href="/matriculas/lista">
+                        <i class="fa fa-file-contract icon-colored"></i>
+                        <span class="TextWhite">Matrícula</span>
+                    </a>
+                    <ul>
+                        <li><a href="/matriculas/formulario-crear" class="abe">Registrar Matrícula</a><br></li>
+                        <li><a href="/matriculas/lista" class="abe">Listado Matrículas</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="sub-menu">
+                    <a href="/asignatura-cursada/listar">
+                        <i class="fa fa-book icon-colored"></i>
+                        <span class="TextWhite">Asignaturas Cursadas</span>
+                    </a>
+                    <ul>
+                        <li><a href="/asignatura-cursada/agregar" class="abe">Registrar Asignaturas Cursadas</a><br></li>
+                        <li><a href="/asignatura-cursada/listar" class="abe">Listado Asignaturas Cursadas</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="/anio-escolar/lista">
+                        <i class="fa fa-calendar-alt icon-colored"></i>
+                        <span class="TextWhite">Año Escolar</span>
+                    </a>
+                    <ul>
+                        <li><a href="/anio-escolar/crear" class="abe">Nuevo Año Escolar</a><br></li>
+                        <li><a href="/anio-escolar/lista" class="abe">Listado Años Escolares</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="sub-menu">
+                    <a href="/periodos/lista">
+                        <i class="fa fa-clock icon-colored"></i>
+                        <span class="TextWhite">Periodo</span>
+                    </a>
+                    <ul>
+                        <li><a href="/periodos/crear" class="abe">Nuevo Periodo</a><br></li>
+                        <li><a href="/periodos/lista" class="abe">Listado Periodos</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="sub-menu">
+                    <a href="/usuario/login">
+                        <i class="fa fa-home icon-colored"></i>
+                        <span class="TextWhite">Volver</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <section id="main-content">
+
+        <div id="main" class="container">
+
+
+
+            <hr>
+            <hr>
+            <div class="container">
+                <h2 class="mb-4">Editar Asignatura</h2>
+
+
+                <form th:action="@{/asignaturas/editar/{id}(id=${asignatura.id})}" th:object="${asignatura}" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" th:field="*{nombre}" class="form-control" required>
+                        <div th:errors="*{nombre}" class="text-danger"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="codigo">Código:</label>
+                        <input type="text" id="codigo" th:field="*{codigo}" class="form-control" required>
+                        <div th:errors="*{codigo}" class="text-danger"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" th:field="*{descripcion}" class="form-control"></textarea>
+                        <div th:errors="*{descripcion}" class="text-danger"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="creditos">Créditos:</label>
+                        <input type="number" id="creditos" th:field="*{creditos}" class="form-control" required>
+                        <div th:errors="*{creditos}" class="text-danger"></div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                        <a th:href="@{/asignaturas/lista}" class="btn btn-secondary ml-2">Volver a la lista de asignaturas</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    </section>
+    </body>
+
+
+<style>
+
+
+     .icon-colored {
+         color: #00ffff;
+     }
+
+</style>
+
+</html>
